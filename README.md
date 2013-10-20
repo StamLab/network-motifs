@@ -17,8 +17,7 @@ Determine how two graphs differ in all their 3 node network motifs
 Build
 ======
 // requires g++ version 4.7 or newer  
-cd src  
-make  
+make -C src/
 
 How-To
 =======
