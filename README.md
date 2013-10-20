@@ -22,15 +22,15 @@ make
 
 How-To
 =======
-bin/find_3node_motifs \<input-graph\>  
+find_3node_motifs \<input-graph\>  
   \<input-graph\> is a file with rows of the form:  
 A   B  
   where a tab separates the node labels and A->B in your graph  
 
 
-bin/motif3_network_changes <target-network-file> <reference-network-file>  
+motif3_network_changes \<target-network-file\> \<reference-network-file\>  
   both graphs should contain rows of the form:
 A   B
   where a tab separates the node labels and A->B in your graph.
 
-  How do those 3-node network motifs in <reference-network-file> map onto the same nodes in <target-network-file>?
+  How do those 3-node network motifs in \<reference-network-file\> map onto the same nodes in \<target-network-file\>?
