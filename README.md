@@ -16,14 +16,14 @@ Determine how two graphs differ in all their 3 node network motifs
 
 Build
 ======
-// requires g++ version 4.7 or newer
+// requires g++ version 4.7 or newer  
 cd src  
 make  
 
 How-To
 =======
-bin/find_3node_motifs <input-graph>  
-  <input-graph> is a file with rows of the form:  
+bin/find_3node_motifs \<input-graph\>  
+  \<input-graph\> is a file with rows of the form:  
 A   B  
   where a tab separates the node labels and A->B in your graph  
 
