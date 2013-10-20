@@ -32,4 +32,4 @@ motif3_network_changes \<target-network-file\> \<reference-network-file\> \> out
 A   B
   where a tab separates the node labels and A->B in your graph.
 
-  How do those 3-node network motifs in \<reference-network-file\> map onto the same nodes in \<target-network-file\>?  'not-found' is an additional category.
+  Determine how every 3-node network motif in \<reference-network-file\> maps as a 3-node motif over the same nodes in \<target-network-file\>?  'not-found' is an additional category.
