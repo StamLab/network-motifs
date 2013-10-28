@@ -35,8 +35,8 @@ A   B
 
 
 motif3_network_changes \<target-network-file\> \<reference-network-file\> \> output.mtx  
-  both graphs should contain rows of the form:
+  both graphs should contain rows of the form:  
 A   B
   where a tab separates the node labels and A->B in your graph.
 
-  Determine how every 3-node network motif in \<reference-network-file\> maps as a 3-node motif over the same nodes in \<target-network-file\>.  'not-found' is an additional category.
+  Determine how every 3-node circuit in \<reference-network-file\> is configured over the same nodes in \<target-network-file\>.  'not-found' is an additional category when the 3 nodes are not connected in \<target-network-file\>.
