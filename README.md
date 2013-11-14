@@ -6,7 +6,7 @@ Overview
 =========
 A set of 'network motif' programs.  
 
-Briefly, a network motif is a particular configuration of directed edges between any N-node subnetwork/circuit.  For the three-node subnetwork case, there are 13 distinct configurations possible between connected nodes.  One can break down any directed graph into a collection of these distinct configurations.  A natural question to ask is whether you find more (or fewer) instances of a network motif in a graph than you would expect by chance, given a directed graph of the same number of nodes and edges.
+Briefly, a network motif is a particular configuration of directed edges between any N-node subnetwork/circuit.  For the three-node subnetwork case, there are 13 distinct configurations possible between connected nodes.  One can break down any directed graph into a collection of these distinct configurations.  A natural question to ask is whether you find more (or fewer) instances of a network motif in a graph than you would expect by chance, given a directed graph of the same number of nodes and edges drawn at random (a Erdős–Rényi graph).  A more appropriate null model might further require that the nodes have the same number of incoming/outgoing edges as in your directed graph.
 
 Research has shown the theoretical and measured importance of each of these simpler three-node circuits, and that directed graphs found from a variety of disciplines often share signatures over the relative enrichment/depletion of these simple circuits.  
 
