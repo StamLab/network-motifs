@@ -16,7 +16,7 @@ See, for example, Network Motifs: Simple Building Blocks of Complex Networks, Sc
 Programs
 =========
 find_3node_motifs  
-Quickly enumerate all 3-node network motifs in a directed graph.  
+Quickly enumerate all 3-node network motifs in a directed graph, with connection-type information. 
 
 motif3_network_changes  
 What do all three-node network motifs look like in a different graph?  This is useful for comparing two graphs.  Say you have biological regulatory networks in graph form over two cell type samples.  How do all 3-node feedforward loops found in one cell type's graph distribute over all 13 three-node network motifs in the second cell type's graph?
