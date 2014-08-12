@@ -28,15 +28,15 @@ make -C src/
 
 How-To
 =======
-find_3node_motifs \<input-graph\> \> output.results  
-  \<input-graph\> is a file with rows of the form:  
+find_3node_motifs [input-graph] \> output.results  
+  [input-graph] is a file with rows of the form:  
 A   B  
   where a tab separates the node labels and A->B in your graph  
 
 
-motif3_network_changes \<target-network-file\> \<reference-network-file\> \> output.mtx  
+motif3_network_changes [target-network-file] [reference-network-file] \> output.mtx  
   both graphs should contain rows of the form:  
 A   B  
   where a tab separates the node labels and A->B in your graph.
 
-  Determine how every 3-node circuit in \<reference-network-file\> is configured over the same nodes in \<target-network-file\>.  'not-found' is an additional category when the 3 nodes are not connected in \<target-network-file\>.
+  Determines how every 3-node circuit in [reference-network-file] is configured over the same nodes in [target-network-file].  'not-found' is an additional category when the 3 nodes are not connected in [target-network-file].
