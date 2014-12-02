@@ -15,10 +15,10 @@ See, for example, Network Motifs: Simple Building Blocks of Complex Networks, Sc
 
 Programs
 =========
-find_3node_motifs  
+_find_3node_motifs_  
 Quickly enumerate all 3-node network motifs in a directed graph, with connection-type information. 
 
-motif3_network_changes  
+_motif3_network_changes_  
 What do all three-node network motifs look like in a different graph?  This is useful for comparing two graphs.  Say you have biological regulatory networks in graph form over two cell type samples.  How do all 3-node feedforward loops found in one cell type's graph distribute over all 13 three-node network motifs in the second cell type's graph?
 
 Build
@@ -28,13 +28,13 @@ make -C src/
 
 How-To
 =======
-find_3node_motifs [input-graph] \> output.results  
+_find_3node_motifs_ [input-graph] \> output.results  
   [input-graph] is a file with rows of the form:  
 A   B  
   where a tab separates the node labels and A->B in your graph  
 
 
-motif3_network_changes [target-network-file] [reference-network-file] \> output.mtx  
+_motif3_network_changes_ [target-network-file] [reference-network-file] \> output.mtx  
   both graphs should contain rows of the form:  
 A   B  
   where a tab separates the node labels and A->B in your graph.
