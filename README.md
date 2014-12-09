@@ -33,10 +33,11 @@ _find_3node_motifs_ [input-graph] \> output.results
 A   B  
   where a tab separates the node labels and A->B in your graph  
 
+Note that _motif3_network_changes_ depends upon outputs from _find_3node_motifs_  
 
-_motif3_network_changes_ [target-network-file] [reference-network-file] \> output.mtx  
-  both graphs should contain rows of the form:  
-A   B  
-  where a tab separates the node labels and A->B in your graph.
+_find_3node_motifs_ [graph-A] \> output.graphA  
+_find_3node_motifs_ [graph-B] \> output.graphB  
+
+_motif3_network_changes_ output.graphA output.graphB \> output.mtx  
 
   Determines how every 3-node circuit in [reference-network-file] is configured over the same nodes in [target-network-file].  'not-found' is an additional category when the 3 nodes are not connected in [target-network-file].
