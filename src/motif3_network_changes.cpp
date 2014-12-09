@@ -1,12 +1,14 @@
 /*
   Shane J. Neph
-  Create Date: 2013
+  Univeristy of Washington
+  March, 2013
 */
+
+// Expect 2 input graphs with rows of the form: A  B, where A->B
 
 #include <algorithm>
 #include <cstddef>
 #include <cstdio>
-#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <iterator>
@@ -63,17 +65,11 @@ namespace {
     }
   };
 
-  struct Help {};
-
   //===========
   // CheckArgs
   //===========
   struct CheckArgs {
     CheckArgs(int argc, char**argv) {
-      for ( int i = 1; i < argc; ++i ) {
-        if ( std::string(argv[i]) == "--help" || std::string(argv[i]) == "-h" )
-          throw(Help());
-      } // for
       if ( argc != 3 )
         throw(Usage());
 
@@ -92,12 +88,11 @@ namespace {
     std::string ReferenceFile() const { return ref_; }
 
     static std::string Usage() {
-      std::string msg = "motif3_network_changes <target-network-file> <reference-network-file>";
-      msg += "\n\n  both graphs should contain rows that look like:";
-      msg += "\nA   B";
-      msg += "\n  where a tab separates the node labels and A->B in your graph.";
-      msg += "\n\n  How do those 3-node network motifs in <reference-network-file> map onto the";
+      std::string msg = "<target-network-file> <reference-network-file>";
+      msg += "\nHow do those 3-node motifs in <reference-network-file> map onto the";
       msg += "\n  same nodes in <target-network-file>?";
+      msg += "\n Note that each input files should be the results of running a directed";
+      msg += "\n  graph through the find_3node_motifs program.";
       return msg;
     }
 
@@ -129,9 +124,6 @@ int main(int argc, char** argv) {
     Counts counts;
     motif_evolution(target, reference, counts);
     spit_rhymes(counts);
-    return EXIT_SUCCESS;
-  } catch(Help& h) {
-    std::cout << CheckArgs::Usage() << std::endl;
     return EXIT_SUCCESS;
   } catch(std::string& s) {
     std::cerr << s << std::endl;
