@@ -4,11 +4,10 @@
   March, 2013
 */
 
-// Expect 2 input graphs with rows of the form: A  B, where A->B
-
 #include <algorithm>
 #include <cstddef>
 #include <cstdio>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <iterator>
@@ -65,11 +64,17 @@ namespace {
     }
   };
 
+  struct Help {};
+
   //===========
   // CheckArgs
   //===========
   struct CheckArgs {
     CheckArgs(int argc, char**argv) {
+      for ( int i = 1; i < argc; ++i ) {
+        if ( std::string(argv[i]) == "--help" || std::string(argv[i]) == "-h" )
+          throw(Help());
+      } // for
       if ( argc != 3 )
         throw(Usage());
 
@@ -124,6 +129,9 @@ int main(int argc, char** argv) {
     Counts counts;
     motif_evolution(target, reference, counts);
     spit_rhymes(counts);
+    return EXIT_SUCCESS;
+  } catch(Help& h) {
+    std::cout << CheckArgs::Usage() << std::endl;
     return EXIT_SUCCESS;
   } catch(std::string& s) {
     std::cerr << s << std::endl;
