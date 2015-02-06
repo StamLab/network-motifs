@@ -34,7 +34,7 @@ A   B
   where a tab separates the node labels and A->B in your graph  
 
 
-_motif3_network_changes_ depends upon outputs from _find_3node_motifs_  
+_motif3_network_changes_ [target-network-file] [reference-network-file] depends upon outputs from _find_3node_motifs_  
 
 find_3node_motifs graph-A \> output.graphA  
 find_3node_motifs graph-B \> output.graphB  

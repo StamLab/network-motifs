@@ -94,7 +94,7 @@ namespace {
 
     static std::string Usage() {
       std::string msg = "<target-network-file> <reference-network-file>";
-      msg += "\nHow do those 3-node motifs in <reference-network-file> map onto the";
+      msg += "\nHow do those 3-node circuits found in <reference-network-file> map onto the";
       msg += "\n  same nodes in <target-network-file>?";
       msg += "\n Note that each input files should be the results of running a directed";
       msg += "\n  graph through the find_3node_motifs program.";
