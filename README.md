@@ -41,5 +41,6 @@ find_3node_motifs graph-B \> output.graphB
 
 motif3_network_changes output.graphA output.graphB \> output.mtx  
 
-  Determines how every 3-node circuit in [reference-network-file] is configured over the same nodes in [target-network-file], and produce a high-level count summary.  'No-Match' is an additional category when the 3 nodes are not connected in [target-network-file].  There is also a 'Matched-Variant' column which shows the number of times a circuit is the same between networks, but the arrows between the 3 nodes have changed directions.
-  With --details, the program shows how every circut in [reference-network-file] appears in [target-network-file].
+  Determines how every 3-node circuit in output.graphB is configured over the same nodes in output.graphA.  'No-Match' is an additional category when the 3 nodes are not connected in [target-network-file].  There is also a 'Matched-Variant' column which shows the number of times a circuit is the same between networks, but the arrows between the 3 nodes have changed directions.
+
+  With --details, the program shows explicitly how every circut in output.graphB appears in output.graphA.  Otherwise, a higher-level count summary is produced.
