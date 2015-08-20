@@ -19,7 +19,7 @@ _find_3node_motifs_
 Quickly enumerate all 3-node network motifs in a directed graph, with connection-type information. 
 
 _motif3_network_changes_  
-What do all three-node network motifs look like in a different graph?  This is useful for comparing two graphs.  Say that you have biological regulatory networks in graph from over two cell type samples.  How do all 3-node feedforward loops found in one cell type's graph distribute over all 13 three-node network motifs in the second cell type's graph?
+What do all three-node network motifs look like in a different graph?  This is useful for comparing two graphs.  Say that you have biological regulatory networks represented as directed graphcs in two cell type samples.  How do all 3-node feedforward loops found in one cell type's graph distribute over all 13 three-node network motifs in the second cell type's graph?
 
 Build
 ======
